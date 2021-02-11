@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;400;500;600&family=Didact+Gothic&family=Josefin+Sans:wght@700&display=swap');
+
+@font-face {
+  font-family: 'Futura Maxi Bold';
+  src: url('../fonts/futura_maxi_cg_bold_regular-webfont.woff2'); /* IE9 Compat Modes */
+  src: url('../fonts/futura_maxi_cg_bold_regular-webfont.woff2') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/futura_maxi_cg_bold_regular-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Futura Maxi Semibold';
+  src: url('../fonts/FuturaMaxiCGDemi.woff2'); /* IE9 Compat Modes */
+  src: url('../fonts/FuturaMaxiCGDemi.woff2') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/FuturaMaxiCGDemi.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Futura Maxi Regular';
+  src: url('../fonts/FuturaMaxiCGBook.woff2'); /* IE9 Compat Modes */
+  src: url('../fonts/FuturaMaxiCGBook.woff2') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/FuturaMaxiCGBook.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Harabara';
+  src: url('../fonts/Harabara.woff2'); /* IE9 Compat Modes */
+  src: url('../fonts/Harabara.woff2') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Harabara.woff2') format('woff2');
+}
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+html,body{ 
+	width:100%;
+	height:100%;
+  background: #202020;
+}
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+  font:normal 100% Arial, Helvetica, sans-serif;
+  
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+/* ---- particles.js container ---- */
+
+.container {
+  padding: 2rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Futura Maxi Bold', sans-serif;
+  font-size: calc(3.5rem + 0.081 * (100vw - 320px));
+  animation: flow 5s ease-in-out infinite;
+  /* background: linear-gradient(220deg, #212B2D, #3d5a68, #5586a6, #ffb701, #ff9302, #ffb701, #5586a6, #3d5a68, #212B2D); */
+  background: linear-gradient(220deg, #a70707,#ff9302,  #a70707);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+h2 {
+  font-family: 'Futura Maxi Semibold', sans-serif;
+  font-size: calc(1rem + 0.01 * (100vw - 320px));
+  font-weight: 500;
+  text-transform: lowercase;
+  line-height: 1.5;
+  color: #c7c7c7;
+  /* letter-spacing: .3rem; */
+}
+
+ul {
+  display: flex;
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+/*********** Header ************/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+header > nav {
+  margin-top: 1rem;
+}
+
+.logo {
+  width: 6.25rem;
+}
+
+.nav {
+  font-family: 'Futura Maxi Semibold', sans-serif;
+  letter-spacing: .1rem;
+  text-transform: lowercase;
+}
+
+.nav li a {
+  font-size: calc(.8rem + 0.006 * (100vw - 320px));
+  color: #fafafa;
+  transition: color .2s ease-in-out;
+  padding: 0 .3rem;
+}
+
+.nav li span {
+  font-size: calc(.8rem + 0.006 * (100vw - 320px));
+}
+
+.nav li a:hover,
+.nav li a:active {
+  cursor: pointer;
+  color: #FF8A00;
+}
+
+.main-content {
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: calc(100vh - 10rem);
+  width: 100%;
+}
+
+.main-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-top: .5rem;
+}
+
+.main-content-right {
+  margin-top: 3rem;
+}
+
+.main-content-right a {
+  position: relative;
+  font-family: 'Futura Maxi Semibold', sans-serif;
+  font-size: calc(1rem + 0.008 * (100vw - 320px));
+  color: #FF8A00;
+  transition: color .2s ease-in-out;
+  /* border-left: 3px solid #fafafa; */
+  padding-left: 2.4rem;
+  text-transform: lowercase;
+  
+}
+
+.main-content-right a::before {
+    content: '';
+    width: 25px;
+    left: 0;
+    top: 40%;
+    position: absolute;
+    border-top: 3px solid #fafafa;
+    
+}
+
+.main-content-right a:hover {
+  color: #fafafa;
+}
+
+.social {
+  margin: 2rem -1rem 0 -1rem;
+}
+
+.social li {
+  margin: 0 1rem;
+}
+
+.social svg {
+  fill:#fafafa;
+  width: calc(1.5rem + 0.005 * (100vw - 320px));
+  transition: fill .2s ease-in-out;
+}
+
+.social svg:hover,
+.social svg:active {
+  cursor: pointer;
+  fill: #FF8A00;
+}
+
+.orange {
+  color: #FF8A00;
+}
+
+@keyframes flow {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.about-content {
+  width: calc(15rem + 0.5 * (100vw - 320px));
+  color: #e4e4e4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.about-content p {
+  font-family: 'Futura Maxi Regular', sans-serif;
+  font-size: calc(1rem + 0.001 * (100vw - 320px));
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+.about-content a {
+  color: #FF8A00;
+  transition: color .2s ease-in-out;
+}
+
+.about-content a:hover {
+  color: #fc4e03;
+}
+
+.skills-list {
+  font-family: 'Didact Gothic', sans-serif;
+  justify-content: center;
+}
+
+.skills-list {
+  font-family: 'Didact Gothic', sans-serif;
+  text-transform: capitalize;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+/******************* loader ********************/
+
+.loader-wrapper {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.preload-finish {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.loader-wrapper .loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 250px;
+  height: 250px;
+  margin-top: -120px;
+  margin-left: -120px;
+  border: 3px solid transparent;
+  border-top-color: #f31000;
+  border-radius: 50%;
+  z-index: 1001;
+  -webkit-animation: spin 1.5s infinite linear;
+          animation: spin 1.5s infinite linear;
+}
+
+.loader-wrapper .countdown {
+  font-family: 'Futura Maxi Bold', sans-serif;
+  font-size: calc(5rem + 0.062 * (100vw - 320px));
+  color: #202020;
+}
+.loader-wrapper .loader:before, .loader-wrapper .loader:after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+.loader-wrapper .loader:before {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 3px solid transparent;
+  border-top-color:#F44336;
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+}
+.loader-wrapper .loader:after {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 3px solid transparent;
+  border-top-color: #F44336;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*Section */
+.loader-section {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: -1000;
+}
+.loader-section.section-curtain {
+  left: 0;
+}
+
+/*Finished Loading Styles*/
+.loaded .section-curtain {
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transform: translateX(-100%);
+  transform: translateY(-100%);
+}
+
+.loaded .loader-wrapper {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out;
+}
+
+@media (min-width: 476px) {
+  .title {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .title h2:last-child {
+    padding-left: .5rem;
+  }
+}
+
+
+@media (min-width: 300px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-content-right {
+    align-items: center;
+    text-align: right;
+  }
+
+  .social {
+    margin-top: 4rem;
+  }
+}
+
+/* 1600px */
+@media (min-width: 1600px) {
+  h1 {
+    font-size: 10rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .loader-wrapper .countdown {
+    font-size: 10rem;
+  }
+}
