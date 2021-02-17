@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;400;500;600&family=Didact+Gothic&family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
 @font-face {
   font-family: 'Futura Maxi Bold';
@@ -21,12 +21,6 @@
        url('../fonts/FuturaMaxiCGBook.woff2') format('woff2');
 }
 
-@font-face {
-  font-family: 'Harabara';
-  src: url('../fonts/Harabara.woff2'); /* IE9 Compat Modes */
-  src: url('../fonts/Harabara.woff2') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/Harabara.woff2') format('woff2');
-}
 /* =============================================================================
    HTML5 CSS Reset Minified - Eric Meyer
    ========================================================================== */
@@ -57,6 +51,8 @@ html,body{
 	width:100%;
 	height:100%;
   background: #202020;
+  color: #fafafa;
+  
 }
 
 html{
@@ -76,9 +72,11 @@ canvas{
 /* ---- particles.js container ---- */
 
 .container {
+  box-sizing: border-box;
   padding: 2rem;
   max-width: 100rem;
   margin: 0 auto;
+  height: 100vh;
 }
 
 h1 {
@@ -104,6 +102,22 @@ h2 {
   /* letter-spacing: .3rem; */
 }
 
+h3 {
+  font-family: 'Futura Maxi Regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #7a7a7a;
+}
+
+p {
+  font-family: 'Didact Gothic', sans-serif;
+  letter-spacing: .5px;
+  font-size: 1.2rem;
+}
 ul {
   display: flex;
   text-transform: uppercase;
@@ -160,7 +174,7 @@ header > nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: calc(100vh - 10rem);
+  height: calc(100% - 4.8rem);
   width: 100%;
 }
 
@@ -179,6 +193,8 @@ header > nav {
 
 .main-content-right {
   margin-top: 3rem;
+  align-self: flex-end;
+  text-align: right;
 }
 
 .main-content-right a {
@@ -190,7 +206,6 @@ header > nav {
   /* border-left: 3px solid #fafafa; */
   padding-left: 2.4rem;
   text-transform: lowercase;
-  
 }
 
 .main-content-right a::before {
@@ -200,7 +215,6 @@ header > nav {
     top: 40%;
     position: absolute;
     border-top: 3px solid #fafafa;
-    
 }
 
 .main-content-right a:hover {
@@ -209,6 +223,7 @@ header > nav {
 
 .social {
   margin: 2rem -1rem 0 -1rem;
+  justify-content: flex-end;
 }
 
 .social li {
@@ -238,11 +253,12 @@ header > nav {
 }
 
 .about-content {
+  margin-top: 5rem;
   width: calc(15rem + 0.5 * (100vw - 320px));
   color: #e4e4e4;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   text-align: center;
@@ -250,8 +266,8 @@ header > nav {
 
 .about-content p {
   font-family: 'Futura Maxi Regular', sans-serif;
-  font-size: calc(1rem + 0.001 * (100vw - 320px));
-  margin-bottom: 1.5rem;
+  font-size: calc(1rem + 0.004 * (100vw - 320px));
+  margin: 1.5rem 0;
   line-height: 1.5;
   letter-spacing: 2px;
 }
@@ -265,24 +281,113 @@ header > nav {
   color: #fc4e03;
 }
 
-.skills-list {
-  font-family: 'Didact Gothic', sans-serif;
-  justify-content: center;
+.about-image {
+  width: 16rem;
+}
+
+.about-image img {
+  border-radius: 45%;
+  border: 10px solid #393939;
 }
 
 .skills-list {
-  font-family: 'Didact Gothic', sans-serif;
-  text-transform: capitalize;
+  font-family: 'Futura Maxi Regular', sans-serif;
+  color: #fafafa;
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
-  text-transform: capitalize;
-  font-size: 1.5rem;
+  font-size: calc(1rem + 0.004 * (100vw - 320px));
+  letter-spacing: 2px;
+  text-transform: none;
+  padding: 3rem 0;
 }
 
-/******************* loader ********************/
+.skills-list > li {
+  position: relative;
+  margin: 1rem 0;
+}
 
-.loader-wrapper {
+.skills-list > li > p {
+  padding-left: 3rem;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+
+.skills-list > li > p::before {
+  content: '';
+  width: 2rem;
+  left: 0;
+  top: 10px;
+  position: absolute;
+  border-top: 3px solid #FF8A00;
+}
+
+.skills-list > li > ul {
+  flex-wrap: wrap;
+  padding-left: 3rem;
+}
+
+.skills-list > li > ul > li {
+  text-transform: none;
+  margin: 0 .2rem;
+}
+
+.skills-list > li > ul > li:after {
+  content: " ● ";
+  color: #343434;
+}
+
+.skills-list > li > ul > li:last-child:after {
+  content: "";
+}
+
+
+/***** Work ****/
+.work-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/***** Work Single ***/
+.work-single-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+}
+
+.role-tools {
+  display: flex;
+  align-self: flex-start;
+  margin-top: 2rem;
+}
+
+.role-tools > div:first-of-type {
+  margin-right: 2rem;
+}
+
+.work-single-desc {
+  margin: 2rem 0;
+}
+
+.work-single-screens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.screen-sm {
+  width: 9rem;
+}
+
+.screen-md {
+  width: 20rem;
+}
+
+
+/******************* loader ********************/
+.home-loader{
   position: fixed;
   display: flex;
   justify-content: center;
@@ -300,7 +405,7 @@ header > nav {
   opacity: 0;
 }
 
-.loader-wrapper .loader {
+.home-loader .loader {
   display: block;
   position: relative;
   left: 50%;
@@ -317,17 +422,17 @@ header > nav {
           animation: spin 1.5s infinite linear;
 }
 
-.loader-wrapper .countdown {
+.home-loader .countdown {
   font-family: 'Futura Maxi Bold', sans-serif;
   font-size: calc(5rem + 0.062 * (100vw - 320px));
   color: #202020;
 }
-.loader-wrapper .loader:before, .loader-wrapper .loader:after {
+.home-loader .loader:before, .loader-wrapper .loader:after {
   content: '';
   position: absolute;
   border-radius: 50%;
 }
-.loader-wrapper .loader:before {
+.home-loader .loader:before {
   top: 5px;
   left: 5px;
   right: 5px;
@@ -337,7 +442,7 @@ header > nav {
   -webkit-animation: spin 2s infinite linear;
           animation: spin 2s infinite linear;
 }
-.loader-wrapper .loader:after {
+.home-loader .loader:after {
   top: 15px;
   left: 15px;
   right: 15px;
@@ -370,7 +475,6 @@ header > nav {
   }
 }
 
-/*Section */
 .loader-section {
   position: fixed;
   top: 0;
@@ -391,13 +495,19 @@ header > nav {
   transform: translateY(-100%);
 }
 
-.loaded .loader-wrapper {
+.loaded .home-loader {
   visibility: hidden;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: all 0.3s 1s ease-out;
   transition: all 0.3s 1s ease-out;
 }
+
+.mfp-content {width: 70%;}
+.mfp-figure:after {
+  background: transparent !important;
+}
+
 
 @media (min-width: 476px) {
   .title {
@@ -418,7 +528,8 @@ header > nav {
   }
 }
 
-@media (min-width: 768px) {
+/* tablet */
+@media (min-width: 740px) {
   .main-content {
     flex-direction: row;
     justify-content: space-between;
@@ -426,14 +537,55 @@ header > nav {
   }
 
   .main-content-right {
-    align-items: center;
-    text-align: right;
+    align-self: center;
   }
 
   .social {
     margin-top: 4rem;
   }
+
 }
+
+
+@media (min-width: 850px) {
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .skills-list > li {
+    width: 48%;
+  }
+
+  .about-skills {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 975px) {
+
+  .about-content {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .about-image {
+    width: 23rem;
+  }
+
+  .about-desc {
+    width: 40%;
+  }
+
+  .about-skills {
+    padding: 0 5rem;
+  }
+
+}
+
 
 /* 1600px */
 @media (min-width: 1600px) {
@@ -445,7 +597,17 @@ header > nav {
     font-size: 2rem;
   }
 
-  .loader-wrapper .countdown {
+  .home-loader .countdown {
     font-size: 10rem;
   }
+
+  .skills-list,
+  .about-content p {
+    font-size: 1.25rem;
+  }
+
+  .skills-list > li {
+    width: 25%;
+  }
+
 }

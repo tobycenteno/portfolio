@@ -3,40 +3,96 @@
 <head>
   <meta charset="utf-8">
   <title>Toby Centeno</title>
-  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
-  <meta name="author" content="Vincent Garreau" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Hey, I'm Toby. I am a web developer and software engineer. Want to work with me? Email me at hello@tobycenteno.ca.">
+  <meta name="keywords" content="toby,centeno,edmonton,web,design,development,software,engineer,programmer">
+  <meta name="author" content="Toby Centeno" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <link rel="stylesheet" media="screen" href="css/reset.css">
   <link rel="stylesheet" media="screen" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="logo" data-aos="fade-down" data-aos-duration="1000">
-        <a href="index.html"><img src="img/logo-light.png" alt="logo"></a>
+      <div class="logo">
+        <a href="/"><img src="img/logo-light.png" alt="logo"></a>
       </div>
-      <nav data-aos="fade-down" data-aos-duration="1000">
+      <nav >
         <ul class="nav">
-          <li><a href="about.html">About</a></li>
-          <li><a href="#">Work</a></li>
+          <li><a href="#">About</a><span class="orange">/</span></li>
+          <li><a href="work.html">Work</a><span class="orange">/</span></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <div class="about-content">
-      <p>
-        Hey there! I'm <strong>Toby</strong>, an Edmonton-based software engineer and web developer. I have more than <a href="https://www.linkedin.com/in/antonio-centeno-iii" target="_blank">8 years of experience</a> in the Philippines as a software engineer mainly in the Telecommunications industry doing end-to-end implementation of projects from the design phase up to deployment in production.
-      </p>
-      <p>
-        Last 2019, I moved to Edmonton to further my studies on web design and development. I am now on my last year at <a href="https://www.nait.ca/programs/dmit-web-design-development" target="_blank">Northern Alberta Institute of Technology</a> and will be graduating on April 2021.
-      </p>
-      <p><strong>SKILLS</strong></p>
-      <ul class="skills-list">
-        <li><strong>Languages:</strong> CSS3, HTML5, JavaScript, SQL, PHP, C, C#, Java, Shell, Perl Scripting</li>
-        <li><strong>Databases:</strong> Oracle 10g, MySQL</li>
-        <li><strong>Frameworks:</strong> React, Tailwind CSS, Bootstrap</li>
-        <li><strong>Tools/IDEs:</strong> Quest Toad, Netbeans, Eclipse, Visual Studio, Visual Studio Code, Adobe Photoshop, Adobe Illustrator ,Adobe XD</li>
-      </ul>
+    <div class="about-content" >
+      <div class="about-image" data-aos="fade-in" data-aos-duration="2000">
+        <img src="img/about-me.jpg" alt="about section image">
+      </div>
+      <div class="about-desc" data-aos="fade-in" data-aos-duration="2000" data-aos-once="true" data-aos-delay="500">
+        <p>
+          Hey there! I'm <strong>Toby</strong>, an Edmonton-based software engineer and web developer. I have more than <a href="https://www.linkedin.com/in/antonio-centeno-iii" target="_blank">8 years of experience</a> in the Philippines as a software engineer mainly in the Telecommunications industry doing implementation of projects from the design phase up to deployment in production.
+        </p>
+        <p>
+          Last 2019, I moved to Edmonton to pursue my passion in front-end development and took Digital Media & IT with specialization on web design and development at <a href="https://www.nait.ca/programs/dmit-web-design-development" target="_blank">Northern Alberta Institute of Technology</a>. I am now on my last semester and will be graduating on April 2021.
+        </p>
+      </div>
+    </div>
+    <div class="about-skills">
+    <ul class="skills-list">
+      <li data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" data-aos-anchor=".about-desc">
+        <p>Languages</p>
+        <ul>
+          <li>JavaScript</li>
+          <li>CSS</li>
+          <li>HTML5</li>
+          <li>SQL</li>
+          <li>PHP</li>
+          <li>C#</li>
+          <li>Java</li>
+          <li>Perl</li>
+          <li>Shell</li>
+        </ul>
+      </li>
+      <li data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-anchor=".about-desc">
+        <p>Databases</p>
+        <ul>
+          <li>MySQL</li>
+          <li>Oracle 10g</li>
+        </ul>
+      </li>
+      <li data-aos="fade-right" data-aos-duration="2000" data-aos-once="true" data-aos-anchor=".about-desc">
+        <p>Frameworks/CMS</p>
+        <ul>
+          <li>React</li>
+          <li>Bootstrap</li>
+          <li>jQuery</li>
+          <li>Tailwind</li>
+          <li>Wordpress</li>
+        </ul>
+      </li>
+      <li data-aos="fade-right" data-aos-duration="2500" data-aos-once="true" data-aos-anchor=".about-desc">
+        <p>Tools/IDEs</p>
+        <ul>
+          <li>Eclipse</li>
+          <li>Netbeans</li>
+          <li>Toad</li>
+          <li>Adobe XD</li>
+          <li>Visual Studio Code</li>
+          <li>Visual Studio</li>
+          <li>Photoshop</li>
+          <li>Illustrator</li>
+        </ul>
+      </li>
+    </ul>
     </div>
   </div>
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    setTimeout(() => {
+      AOS.init();
+    }, 500);
+  </script>
 </body>
 </html>
