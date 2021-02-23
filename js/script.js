@@ -35,6 +35,7 @@ $(document).ready(function() {
   $('.image-link').magnificPopup({
     type: 'image',
     closeOnContentClick: true,
+    alignTop : true,
     image: {
       verticalFit: false
     }

@@ -12,28 +12,37 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+  <div class="container" data-aos="fade-in" data-aos-duration="1000">
     <header>
       <div class="logo">
-        <a href="/"><img src="img/logo-light.png" alt="logo"></a>
+        <a href="/staging"><img src="img/logo-light.png" alt="logo"></a>
       </div>
       <nav >
         <ul class="nav">
-          <li><a href="about.html">About</a><span class="orange">/</span></li>
+          <li><a href="about">About</a><span class="orange">/</span></li>
           <li><a href="#">Work</a><span class="orange">/</span></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <div class="work-content">
-      <a href="work/anthonysrecipe.html"><img src="img/work/anthony/thumb-anthony.png" alt="anthonys recipe thumbnail"></a>
+      <div class="work-content-title">
+        <h3>Explore my work</h3>
+        <p>Click on a thumbnail to view details</p>
+      </div>
+      <div class="work-content-thumbs">
+        <a href="works/anthonysrecipe" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200"><img src="img/work/anthony/thumb-anthony.png" alt="anthonys recipe thumbnail"></a>
+        <a href="works/newway" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300"><img src="img/work/newway/thumb-newway.png" alt="anthonys recipe thumbnail"></a>
+      </div>
     </div>
   </div>
   <script src="js/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     setTimeout(() => {
-      AOS.init();
+      AOS.init({
+        once: true
+      });
     }, 500);
   </script>
 </body>
