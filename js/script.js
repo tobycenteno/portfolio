@@ -34,6 +34,7 @@ if(loader) {
 $(document).ready(function() {
   $('.image-link').magnificPopup({
     type: 'image',
+    mainClass: 'mfp-with-zoom',
     closeOnContentClick: true,
     alignTop : true,
     image: {

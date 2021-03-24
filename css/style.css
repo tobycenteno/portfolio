@@ -438,7 +438,28 @@ padding-left: 0;
 }
 
 .work-single-responsive {
+  font-family: 'Didact Gothic', sans-serif;
   max-width: 60rem;
+  margin: 2rem 0 5rem 0;
+  text-align: center;
+}
+
+.work-single-responsive .view-site-btn {
+  font-family: 'Didact Gothic', sans-serif;
+  background-color:#202020;
+  border: 1px solid #FF8A00;
+  color:#fafafa;
+  padding: .2rem 1rem;
+  transition: background-color .3s ease-in-out;
+}
+
+.work-single-responsive .view-site-btn:hover {
+  background-color:#FF8A00;
+  color:#fafafa;
+}
+
+.work-single-responsive img {
+  max-width: 50rem;
 }
 
 .screen-single-sm,
@@ -487,6 +508,36 @@ padding-left: 0;
   margin-right: .5rem;
   transition: fill .5s ease-in-out;
 }
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+.mfp-zoom-out-cur {
+  cursor: pointer;
+  }
+  .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: pointer  !important;
+  }
 
 /***** Work Single ***/
 .contact-content {
